@@ -1,4 +1,4 @@
-var odmcss = `
+let a = `
 :root {
     filter: invert(90%) hue-rotate(180deg) brightness(100%) contrast(100%);
     background: #fff;
@@ -9,14 +9,14 @@ iframe, img, image, video, [style*="background-image"] {
 } 
 `;
   
-id=“orion-browser-dark-theme";
+id="obdt";
 ee = document.getElementById(id);
 if (null != ee) ee.parentNode.removeChild(ee);
 else {
-  style = document.createElement('style');
-  style.type = "text/css";
-  style.id = id;
-  if (style.styleSheet) style.styleSheet.cssText = odmcss;
-  else style.appendChild(document.createTextNode(odmcss));
-  document.head.appendChild(style);
+  s = document.createElement('style');
+  s.type = "text/css";
+  s.id = id;
+  if (s.styleSheet) s.styleSheet.cssText = a;
+  else s.appendChild(document.createTextNode(a));
+  document.head.appendChild(s);
 }
